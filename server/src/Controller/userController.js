@@ -99,21 +99,21 @@ const registerUser = async function (req, res) {
           .status(400)
           .send({ status: false, message: "enter valid password" });
       }
-      if (!validator.isValid(confirmPassword)) {
-        return res
-          .status(400)
-          .send({ status: false, message: "enter valid confirmpassword" });
-      }
+      // if (!validator.isValid(confirmPassword)) {
+      //   return res
+      //     .status(400)
+      //     .send({ status: false, message: "enter valid confirmpassword" });
+      // }
 
-      if (password !== confirmPassword) {
-        return res
-          .status(422)
-          .send({
-            status: false,
-            message: "password does not match with confirm password",
-          });
-      }
-      delete req.body["confirmPassword"];
+      // if (password !== confirmPassword) {
+      //   return res
+      //     .status(422)
+      //     .send({
+      //       status: false,
+      //       message: "password does not match with confirm password",
+      //     });
+      // }
+      // delete req.body["confirmPassword"];
 
       if (!validator.isValid(address)) {
         return res
